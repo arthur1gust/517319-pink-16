@@ -1,0 +1,19 @@
+.copyright {
+  font-size: 0;
+  margin-top: 34px;
+}
+
+.copyright__develop-txt {
+  font-size: $font-size;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 3px;
+}
+
+.copyright__owner {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 14px;
+  width: 27px;
+  height: 34px;
+}

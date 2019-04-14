@@ -1,0 +1,18 @@
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-style($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  text-align: center;
+}
+
+@mixin location($display: block, $position: absolute, $content: "") {
+  display: $display;
+  position: $position;
+  content: $content;
+}
