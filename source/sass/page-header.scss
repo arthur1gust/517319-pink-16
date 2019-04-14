@@ -18,7 +18,7 @@
   text-align: left;
 }
 
-.page-header--opened {
+.page-header--open {
   background-color: $blue;
 }
 
@@ -32,7 +32,6 @@
 
 .page-header__logo svg {
   object-fit: contain;
-  margin-left: 0px;
   fill: $white;
 
   &:hover {

@@ -16,3 +16,17 @@
   position: $position;
   content: $content;
 }
+
+@mixin link {
+  color: $white;
+  text-decoration: none;
+  display: block;
+}
+
+@mixin respond-to($breakpoint) {
+  $width-screen: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $width-screen) {
+    @content;
+  }
+}
