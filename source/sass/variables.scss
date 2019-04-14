@@ -8,6 +8,8 @@ $blue: #283645;
 $blue-dark: #1d2632;
 $red: #d22856;
 
+$gray-border: #485461;
+
 $bg--body: $white;
 $link-color: $pink;
 $link-color--hover: $black;
@@ -25,3 +27,9 @@ $phones-max: 659px;
 $tablets: 660px;
 $tablets-max: 959px;
 $desktops: 960px;
+
+$breakpoints: (
+  "phone": 320px,
+  "tablet": 660px,
+  "desktop": 960px,
+);
