@@ -1,0 +1,35 @@
+.like {
+  @include font-style(12px, 24px, lighter);
+
+  text-transform: uppercase;
+  text-align: left;
+  color: $red;
+  padding-left: 35px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.like__image {
+  @include background_Image;
+
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  left: 0;
+}
+
+.like__image svg {
+  fill: $red;
+}
+
+@include respond-to(medium) {
+  .like {
+    padding-left: 0;
+    padding-right: 35px;
+  }
+
+  .like__image {
+    right: 0;
+    left: auto;
+  }
+}

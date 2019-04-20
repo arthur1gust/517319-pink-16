@@ -4,6 +4,11 @@
   list-style: none;
 }
 
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
 @mixin font-style($size, $height, $weight) {
   font-size: $size;
   line-height: $height;
@@ -29,4 +34,16 @@
   @media (min-width: $width-screen) {
     @content;
   }
+}
+
+@mixin color-btn($color, $bg-color) {
+  border: 3px solid $color;
+  border-radius: 35px;
+  background-color: $bg-color;
+  color: $color;
+}
+
+@mixin background_Image {
+  background-position: center;
+  background-repeat: no-repeat;
 }

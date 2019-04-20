@@ -29,6 +29,7 @@
           <h1 class="intro__title">Фотографии пользователей</h1>
         </div>
       </header>
+
       <div class="gallery">
         <div class="gallery__lead">
           <p>
@@ -184,6 +185,41 @@
           </div>
         </div>
       </div>
+      <section class="photo-load">
+      <h2 class="photo-load__title">Затмите их всех!<br>Выкладывай все, что накопилось в телефоне!</h2>
+      <div class="photo-load__wrapper">
+        <div class="main-wrapper">
+          <div class="photo-load__image">
+          </div>
+          <div class="photo-load__filters">
+            <ul class="photo-load__option edit">
+              <li class="edit__item">
+                <button class="edit__toggle" type="button">
+                  <svg width="44" height="44"></svg>
+                </button>
+                <input class="visually-hidden" id="range" type="range" min="0" max="100" value="80">
+                <label for="range"></label>
+              </li>
+              <li class="edit__item">
+                <button class="edit__toggle" type="button">
+                  <svg width="44" height="44"></svg>
+                </button>
+                <input class="visually-hidden" id="range" type="range" min="0" max="100" value="80">
+                <label for="range" class="edit__range--hidden"></label>
+              </li>
+              <li class="edit__item">
+                <button class="edit__toggle" type="button">
+                  <svg width="32" height="32"></svg>
+                </button>
+                <input class="visually-hidden" id="range" type="range" min="0" max="100" value="80">
+                <label for="range" class="edit__range--hidden"></label>
+              </li>
+            </ul>
+            <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
+            <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="main-footer main-footer--hidden">
       <div class="main-wrapper main-footer__wrapper">

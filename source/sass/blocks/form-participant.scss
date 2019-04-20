@@ -1,0 +1,135 @@
+.form-participant {
+  @include reset;
+
+  border: none;
+  box-sizing: border-box;
+  padding-bottom: 28px;
+}
+
+.form-participant__item {
+  @include reset;
+  @include font-style(14px, 30px, normal);
+
+  text-align: left;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-participant__label {
+  color: $red;
+  text-transform: uppercase;
+  padding: 0 20px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.form-participant__input {
+  @include font-style(18px, 30px, normal);
+
+  text-align: left;
+  color: $blue;
+  padding: 15px 20px;
+  border: $table-border;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: $blue;
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $red;
+    outline: none;
+  }
+}
+
+.form-participant__title {
+  display: none;
+}
+
+.form-participant__image {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .form-participant__item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 50px;
+    position: relative;
+
+    &--col {
+      width: 80.85%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      flex-direction: column-reverse;
+
+      & .form-participant__label {
+        padding-top: 7px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .form-participant__label {
+    padding-left: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .form-participant__input {
+    padding-bottom: 14px;
+    display: block;
+
+    &--phone {
+      padding-right: 60px;
+      position: relative;
+    }
+
+    &--mail {
+      padding-right: 60px;
+      position: relative;
+    }
+  }
+
+  .form-participant__image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $grey;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+
+    & svg {
+      fill: $red;
+    }
+  }
+
+  .form-participant__title {
+    @include font-style(14px, 30px, normal);
+
+    display: inline-block;
+    color: $red;
+    text-transform: uppercase;
+    padding: 0 15px;
+    margin-bottom: 35px;
+  }
+}
+
+@include respond-to(large) {
+  .form-participant__item--col {
+    width: 40%;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
