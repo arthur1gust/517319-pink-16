@@ -1,4 +1,4 @@
-.photo__wrapper-text {
+.photo__container-text {
   @include reset;
 
   color: $blue;
@@ -38,7 +38,7 @@
   height: 100%;
 }
 
-.photo__wrapper-text--panorama {
+.photo__container-text--panorama {
   background-color: $gray;
   box-sizing: border-box;
   margin: $center;
@@ -77,7 +77,7 @@
   margin-top: auto;
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .photo__image {
     height: 300px;
 
@@ -90,7 +90,7 @@
     }
   }
 
-  .photo__wrapper-text {
+  .photo__container-text {
     padding-left: 25px;
     padding-right: 30px;
     flex-direction: column;
@@ -127,7 +127,7 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(desktop) {
   .photo__image {
     height: 400px;
 

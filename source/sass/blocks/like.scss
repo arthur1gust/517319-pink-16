@@ -10,7 +10,7 @@
 }
 
 .like__image {
-  @include background_Image;
+  @include background_image;
 
   position: absolute;
   height: 20px;
@@ -22,7 +22,7 @@
   fill: $red;
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .like {
     padding-left: 0;
     padding-right: 35px;

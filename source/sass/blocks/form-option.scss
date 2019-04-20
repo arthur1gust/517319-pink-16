@@ -121,7 +121,7 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(desktop) {
   .form-option__list--col {
     display: flex;
     flex-wrap: wrap;

@@ -5,14 +5,14 @@
   z-index: 100;
 }
 
-.page-header__wrapper {
+.page-header__container {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   width: 100%;
 }
 
-.page-header__wrapper-logo {
+.page-header__container-logo {
   width: 87.5%;
   margin: $center;
   text-align: left;
@@ -47,12 +47,12 @@
   }
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .page-header {
     min-height: $header-height-m;
   }
 
-  .page-header__wrapper-logo {
+  .page-header__container-logo {
     width: 93.9%;
   }
 
@@ -68,18 +68,18 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(desktop) {
   .page-header {
     background: rgba(40, 54, 69, 0.3);
   }
 
-  .page-header__wrapper-logo {
+  .page-header__container-logo {
     width: 18%;
     margin: 0;
     margin-right: auto;
   }
 
-  .page-header__wrapper {
+  .page-header__container {
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;

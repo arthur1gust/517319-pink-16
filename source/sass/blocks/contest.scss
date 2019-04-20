@@ -19,7 +19,7 @@
   }
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .contest {
     padding-top: 95px;
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(desktop) {
   .contest__title {
     &--hidden {
       display: inline-block;

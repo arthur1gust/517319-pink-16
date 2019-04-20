@@ -7,7 +7,7 @@
   z-index: 10;
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .main-content {
     margin-top: -$header-height-m;
   }

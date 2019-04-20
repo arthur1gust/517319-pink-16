@@ -1,4 +1,4 @@
-.contest-form__wrapper {
+.contest-form__container {
   width: 100%;
   background-color: $gray;
 }
@@ -54,7 +54,7 @@
   margin-bottom: 37px;
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .contest-form {
     width: 93.9%;
     margin: 0 auto;
@@ -63,7 +63,7 @@
     justify-content: space-between;
   }
 
-  .contest-form__wrapper {
+  .contest-form__container {
     background-color: $white;
 
     &--os {
@@ -148,7 +148,7 @@
     box-sizing: border-box;
   }
 
-  .contest-form__contact-wrapper {
+  .contest-form__contact-container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -159,7 +159,7 @@
     padding: 0 60px;
   }
 
-  .contest-form__wrapper--os {
+  .contest-form__container--os {
     width: 45%;
     margin: 0;
   }

@@ -57,7 +57,7 @@
 }
 
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .button {
     @include font-style(21px, 18px, bold);
   }

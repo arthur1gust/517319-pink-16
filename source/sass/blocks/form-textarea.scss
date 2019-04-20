@@ -12,14 +12,14 @@
   min-height: 200px;
 }
 
-@include respond-to(medium) {
+@include respond-to(tablet) {
   .form-textarea__text {
     min-height: 192px;
     margin-bottom: 30px;
   }
 }
 
-@include respond-to(large) {
+@include respond-to(desktop) {
   .form-textarea {
     width: 100%;
   }
