@@ -44,7 +44,6 @@
   .download-pink {
     background-color: transparent;
     padding: 0;
-    width: 100%;
   }
 
   .download-pink_list {
@@ -81,7 +80,7 @@
 }
 
 @include respond-to(desktop) {
-  .download-pink__wrapper {
+  .download-pink__container {
     padding-left: 15px;
   }
 
@@ -117,7 +116,6 @@
 .list-icon {
   @include reset-list();
   margin: 0 auto;
-
   width: 220px;
   display: flex;
   justify-content: space-between;

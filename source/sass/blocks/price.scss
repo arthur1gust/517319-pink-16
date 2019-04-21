@@ -1,0 +1,182 @@
+.price {
+  overflow: hidden;
+  background-color: $gray;
+  position: relative;
+}
+
+.table__container {
+  margin: $center;
+  padding-top: 91px;
+  background-size: cover;
+}
+
+.tables-price {
+  @include font-style(14px, 30px, normal);
+
+  border-collapse: collapse;
+  width: 300%;
+  transform: translateX(-33.33%);
+  border: $table-border;
+  margin-bottom: 34px;
+}
+
+.table__name {
+  @include font-style(18px, 30px, bold);
+
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  padding-bottom: 21px;
+  border-right: $table-border;
+
+  &--hit {
+    &::before {
+      @include location;
+
+      width: 74px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      @include location($content: "ХИТ");
+      @include font-style(14px, 30px, lighter);
+
+      transform: rotate(-45deg);
+      top: 10px;
+      left: 13px;
+    }
+  }
+}
+
+.table__feature {
+  border: $table-border;
+  padding-left: 22px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.table__feature-name {
+  @include reset;
+
+  text-align: left;
+  background-color: transparent;
+}
+
+.table__price {
+  @include font-style(24px, 30px, lighter);
+}
+
+@include respond-to(tablet) {
+  .price {
+    padding-bottom: 70px;
+  }
+
+  .table__container {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    padding-top: 86px;
+  }
+
+  .table__feature {
+    text-transform: none;
+    box-sizing: border-box;
+    text-align: left;
+    min-width: 0;
+    width: 20%;
+    padding-left: 14px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+
+    &--checked {
+      background-position: 50% 50%;
+      background-size: 31px 21px;
+    }
+
+    &--unchecked {
+      background-position: 50% 50%;
+      background-size: 27px 26px;
+    }
+  }
+
+  .table__feature-name {
+    display: none;
+  }
+
+  .tables-price {
+    transform: translateX(0);
+    min-width: 620px;
+    margin: $center;
+  }
+
+  .table__price {
+    @include font-style(18px, 30px, lighter);
+  }
+
+  .table__name {
+    @include font-style(16px, 30px, bold);
+
+    width: 20%;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    min-width: 0;
+  }
+
+  .table__name--hit {
+    &::before {
+      background-image: url("../img/bg-hit-tablet.svg");
+      width: 61px;
+      height: 61px;
+    }
+
+    &::after {
+      left: 8px;
+      top: 3px;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .price {
+    padding-bottom: 98px;
+  }
+
+  .table__container {
+    margin-top: 0;
+    padding-top: 190px;
+  }
+
+  .tables__price {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .table__name {
+    @include font-style(18px, 30px, bold);
+
+    padding-bottom: 20px;
+    padding-top: 15px;
+  }
+
+  .table__price {
+    @include font-style(24px, 30px, lighter);
+  }
+
+  .table__feature {
+    @include font-style(18px, 30px, normal);
+
+    padding-left: 22px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    text-align: left;
+  }
+}

@@ -1,14 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "OpenSans", "Arial", sans-serif;
   color: $blue;
   background-color: $white;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  max-width: 1400px;
   min-width: 320px;
-  margin: $center;
   padding: 0;
+  margin: 0;
 }
 
 img {

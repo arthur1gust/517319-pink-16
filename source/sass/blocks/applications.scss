@@ -18,7 +18,6 @@
   color: $white;
   padding-top: 100px;
   padding-bottom: 30px;
-  width: 87.5%;
   margin: $center;
 }
 
@@ -36,7 +35,6 @@
   .applications__name {
     @include font-style(50px, 60px, lighter);
 
-    width: 93.9%;
     padding-top: 180px;
   }
 }

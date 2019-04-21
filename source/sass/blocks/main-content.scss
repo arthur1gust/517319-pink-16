@@ -1,14 +1,13 @@
 .main-content {
-  width: 100%;
   margin: $center;
-  box-sizing: border-box;
-  margin-top: -$header-height;
+  margin-top: -72px;
   position: relative;
   z-index: 10;
+  margin: $center;
 }
 
 @include respond-to(tablet) {
   .main-content {
-    margin-top: -$header-height-m;
+    margin-top: -110px;
   }
 }

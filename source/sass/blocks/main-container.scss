@@ -1,16 +1,21 @@
 .main-container {
-  width: 87.5%;
   margin: $center;
+  width: 320px;
+  padding: 20px;
 }
 
 @include respond-to(tablet) {
   .main-container {
-    width: 93.9%;
+    width: 660px;
+    margin: $center;
+    padding: 20px;
   }
 }
 
 @include respond-to(desktop) {
   .main-container {
-    width: 80%;
+    width: 960px;
+    margin: $center;
+    padding: 10px;
   }
 }

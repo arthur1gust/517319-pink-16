@@ -3,17 +3,17 @@
   min-height: $header-height;
   background: rgba(40, 54, 69, 0.3);
   z-index: 100;
+  margin: $center;
 }
 
 .page-header__container {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  width: 100%;
+  margin: $center;
 }
 
 .page-header__container-logo {
-  width: 87.5%;
   margin: $center;
   text-align: left;
 }
@@ -49,11 +49,10 @@
 
 @include respond-to(tablet) {
   .page-header {
-    min-height: $header-height-m;
+    min-height: 110px;
   }
 
   .page-header__container-logo {
-    width: 93.9%;
   }
 
   .page-header__logo {
@@ -74,7 +73,6 @@
   }
 
   .page-header__container-logo {
-    width: 18%;
     margin: 0;
     margin-right: auto;
   }
@@ -83,7 +81,6 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
-    width: 80%;
     margin: $center;
   }
 

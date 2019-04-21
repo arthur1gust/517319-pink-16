@@ -1,14 +1,28 @@
 .main-nav {
   @include font-style(18px, 32px, bold);
-
+  width: 320px;
   color: $white;
-  width: 100%;
+  margin: $center;
+  padding: 0;
+
+  @media (min-width: $tablets) {
+    width: 660px;
+    margin: $center;
+    padding: 0;
+  }
+
+  @media (min-width: $desktops) {
+    display: block;
+    border-top: none;
+    width: 960px;
+    margin: $center;
+    padding: 0;
+  }
 }
 
 .main-nav__items {
   display: block;
   text-align: center;
-  width: 100%;
   box-sizing: border-box;
 
   @include reset-list;
@@ -18,11 +32,8 @@
   }
 
   @media (min-width: $desktops) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: block;
     border-top: none;
-    justify-content: flex-end;
   }
 }
 
@@ -204,7 +215,7 @@
 
 @include respond-to(desktop) {
   .main-nav {
-    width: 67.8%;
+    //width: 67.8%;
   }
 
   .main-nav__list {
