@@ -4,6 +4,7 @@
   color: $white;
   margin: $center;
   padding: 0;
+  position: relative;
 
   @media (min-width: $tablets) {
     width: 660px;
@@ -101,7 +102,7 @@
   padding: 0;
   position: absolute;
   top: 20px;
-  right: 6.3%;
+  right: 30px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -118,12 +119,12 @@
 }
 
 .main-nav--close .main-nav__trigger:hover::before {
-  background-color: $red;
-  box-shadow: 0 8px 0 0 $red, 0 16px 0 0 $red;
+  background-color: $white;
+  box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
 }
 
 .main-nav--close .main-nav__trigger:active::before {
-  background-color: rgba($red, 0.3);
+  background-color: rgba($white, 0.3);
   box-shadow: 0 8px 0 0 rgba($red, 0.3), 0 16px 0 0 rgba($red, 0.3);
 }
 
@@ -160,7 +161,7 @@
 }
 
 .main-nav--withoutjs .main-nav__trigger {
-  display: none;
+  //display: none;
 }
 
 .main-nav--withoutjs .main-nav__items {
@@ -216,6 +217,7 @@
 @include respond-to(desktop) {
   .main-nav {
     //width: 67.8%;
+    //display: flex;
   }
 
   .main-nav__list {
@@ -229,12 +231,26 @@
     display: block;
   }
 
+  .main-nav__items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+    background-color: transparent;
+  }
+
   .main-nav__item {
     width: auto;
   }
 
   .main-nav--open .main-nav__items {
     background-color: transparent;
+  }
+
+  .main-nav__trigger {
+    display: none;
   }
 
   .main-nav__link {
@@ -261,6 +277,6 @@
   }
 
   .main-nav__button {
-    display: none;
+    //display: none;
   }
 }

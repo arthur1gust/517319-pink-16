@@ -8,16 +8,18 @@
   margin: $center;
   padding-top: 91px;
   background-size: cover;
+  width: 320px;
 }
 
 .tables-price {
   @include font-style(14px, 30px, normal);
 
   border-collapse: collapse;
-  width: 300%;
+  //width: 100%;
   transform: translateX(-33.33%);
   border: $table-border;
   margin-bottom: 34px;
+  min-width: (278 * 3);
 }
 
 .table__name {
@@ -85,6 +87,7 @@
     margin-right: auto;
     overflow: visible;
     padding-top: 86px;
+    box-sizing: border-box;
   }
 
   .table__feature {
@@ -116,6 +119,7 @@
     transform: translateX(0);
     min-width: 620px;
     margin: $center;
+    //width: 20px;
   }
 
   .table__price {
