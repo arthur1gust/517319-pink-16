@@ -2,49 +2,180 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="logo-pink-header" href="index.html">
-          PINK
-        </a>
-        <button class="main-nav__trigger" type="button"></button>
-        <nav class="main-nav">
+    <header class="page-header page-header--open">
+      <div class="page-header__container">
+        <nav class="main-nav main-nav--close main-nav--withoutjs">
+          <div class="page-header__container-logo">
+          <a class="page-header__logo">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
+              <g>
+                <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
+                <path fill="#FFFFFF" d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
+                <path fill="#FFFFFF" d="M30.87,1.32c0-0.676,0.579-1.256,1.256-1.256h0.354c0.58,0,0.934,0.29,1.288,0.74l13.684,17.45V1.256 C47.451,0.58,47.998,0,48.707,0c0.676,0,1.223,0.58,1.223,1.256v20.348c0,0.676-0.482,1.191-1.158,1.191h-0.129 c-0.548,0-0.934-0.322-1.32-0.772L33.349,4.153v17.45c0,0.676-0.547,1.256-1.255,1.256c-0.677,0-1.224-0.58-1.224-1.256V1.32z"/>
+                <path fill="#FFFFFF" d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z"/>
+              </g>
+            </svg>
+          </a>
+          <button class="main-nav__trigger" type="button"></button>
+        </div>
           <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a>Конкурс</a></li>
-            <li class="main-nav__item"><a href="http://www.htmlacademy.ru">HTML Academy</a></li>
+            <li class="main-nav__item"><a class= "main-nav__link main-nav__link--current">Главная</a></li>
+            <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a class= "main-nav__link" href="http://www.htmlacademy.ru">HTML Academy</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="main-contest">
-      <header class="intro">
-        <div class="intro__inner">
-          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    <main class="main-content">
+      <div class="intro main-container">
+        <div class="applications applications--background">
+          <h1 class="applications__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
-      </header>
-
+        <section class="contest">
+          <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="contest-form__name form-participant">
+              <legend class="visually-hidden">ФИО пользователя</legend>
+              <p class="form-participant__item">
+                <label class="form-participant__label" for="surname">Фамилия:</label>
+                <input class="form-participant__input" type="text" name="surname" id="surname" value="" placeholder="Укажите фамилию *" required autofocus>
+              </p>
+              <p class="form-participant__item">
+                <label class="form-participant__label" for="name">Имя:</label>
+                <input class="form-participant__input" type="text" name="name" id="name" value="" placeholder="Введите ваше имя *" required>
+              </p>
+              <p class="form-participant__item">
+                <label class="form-participant__label" for="patronymic">Отчество:</label>
+                <input class="form-participant__input" type="text" name="patronymic" id="patronymic" value="" placeholder="Ну и отчество тоже">
+              </p>
+            </fieldset>
+            <div class="contest-form__container contest-form__container--progress">
+              <fieldset class="contest-form__progress form-option">
+                <legend class="form-option__title">Ваши безбашенные достижения в путешествии</legend>
+                <ul class="form-option__list form-option__list--col">
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="selfy" id="selfy" checked>
+                    <label for="selfy">Сделал селфи с акулой</label>
+                  </li>
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="beach" id="beach" checked>
+                    <label for="beach">Обгорел на пляже</label>
+                  </li>
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="chuck-noris" id="chuck-noris">
+                    <label for="chuck-noris">Увидел Чака Норриса</label>
+                  </li>
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="souvenir" id="souvenir" >
+                    <label for="souvenir">Накупил сувениров</label>
+                  </li>
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="tower" id="tower" checked>
+                    <label for="tower">Удержал башню</label>
+                  </li>
+                  <li class="form-option__item">
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="crush" id="crush" >
+                    <label for="crush">Разгромил отель</label>
+                  </li>
+                </ul>
+            </fieldset>
+            </div>
+            <fieldset class="contest-form__contact form-participant">
+              <legend class="form-participant__title">Контактная информация</legend>
+              <div class="contest-form__contact-container">
+                <p class="form-participant__item form-participant__item--col">
+                  <label class="form-participant__label" for="phone">Номер телефона</label>
+                  <input class="form-participant__input form-participant__input--phone" type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
+                  <span class="form-participant__image">
+                    <svg width="20" height="20" title="Телефон"><use xlink:href="#icon-phone"></use></svg>
+                  </span>
+                </p>
+                <p class="form-participant__item form-participant__item--col">
+                  <label class="form-participant__label" for="mail">Адрес почты</label>
+                  <input class="form-participant__input form-participant__input--mail" type="text" name="mail" id="mail" value="" placeholder="Введите почту*" required>
+                  <span class="form-participant__image">
+                    <svg width="20" height="15" title="Почта"><use xlink:href="#icon-mail"></use></svg>
+                  </span>
+                </p>
+              </div>
+            </fieldset>
+            <div class="contest-form__container contest-form__container--os">
+            <fieldset class="contest-form__os form-option">
+              <legend class="form-option__title">С каким приложением путешествовали?</legend>
+              <ul class="form-option__list">
+                <li class="form-option__item">
+                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="ios" id="ios" checked>
+                  <label for="ios">Pink для iOS</label>
+                </li>
+                <li class="form-option__item">
+                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="android" id="android">
+                  <label for="android">Pink на Android</label>
+                </li>
+                <li class="form-option__item">
+                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="windows" id="windows">
+                  <label for="windows">Windows Phone</label>
+                </li>
+              </ul>
+            </fieldset>
+            </div>
+            <fieldset class="contest-form__text form-participant">
+              <legend class="form-participant__title">Опишите свои эмоции</legend>
+              <p class="form-participant__item form-participant__item--col form-textarea">
+                <label class="form-participant__label form-participant__label--hidden" for="emotion">Опишите свои эмоции</label>
+                <textarea name="think" class="form-participant__input form-textarea__text" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </p>
+            </fieldset>
+            <button type="submit" class="contest-form__button button">Отправить форму</button>
+            <small class="contest-form__note">
+              <sup>*</sup> — Обязательные <span>для заполнения</span> поля
+            </small>
+          </form>
+        </section>
+      </div>
     </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <a class="page-footer__link" href="index.html">
-          PINK
+    <footer class="main-footer main-footer--hidden">
+      <div class="main-container main-footer__container">
+        <a class="main-footer__logo">
+          <svg width="147" height="40">
+          </svg>
         </a>
-        <div class="social">
-          <a class="social__link  social__link--twitter" href="#"></a>
-          <a class="social__link  social__link--facebook" href="#"></a>
-          <a class="social__link  social__link--youtube" href="#"></a>
+        <div class="main-footer__social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://twitter.com">
+                <svg width="17" height="14">
+                </svg>
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com">
+                <svg width="8" height="18">
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com">
+                <svg width="14" height="13">
+                </svg>
+                <span class="visually-hidden">Youtube</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="copyright">
-          <span class="copyright__develop-txt">Разработано</span>
-          <a class="copyright__owner" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="30" height="30"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+        <div class="main-footer__copyright">
+          <span class="copyright__text">Разработано:</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg width="27" height="34">
+            </svg>
+            <span class="visually-hidden">HTML Academy</span>
           </a>
         </div>
       </div>

@@ -1,0 +1,64 @@
+.button {
+  @include font-style(18px, 18px, bold);
+
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  background-color: $green;
+  color: $white;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $grey;
+  }
+}
+
+.button--rounded {
+  @include color-btn($white, $bg-color: inherit);
+
+  text-transform: none;
+}
+
+.button--rounded-red {
+  @include color-btn($red, $bg-color: $white);
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+}
+
+.button--rounded-gray {
+  @include color-btn($gray-button, $bg-color: $white);
+
+  &:hover {
+    border-color: rgba($blue, 0.3);
+    background-color: $white;
+    color: rgba($blue, 0.3);
+  }
+
+  &:active {
+    background-color: rgba($blue, 0.3);
+    color: rgba($white, 0.3);
+  }
+}
+
+
+@include respond-to(tablet) {
+  .button {
+    @include font-style(21px, 18px, bold);
+  }
+}

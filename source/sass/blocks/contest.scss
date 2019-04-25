@@ -1,0 +1,46 @@
+.contest {
+  background-color: $white;
+  color: $blue;
+  padding-top: 45px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.contest__title {
+  @include font-style(14px, 30px, normal);
+  @include reset;
+
+  margin: $center;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@include respond-to(tablet) {
+  .contest {
+    padding-top: 95px;
+  }
+
+  .contest__title {
+    @include font-style(18px, 30px, normal);
+
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 67px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .contest__title {
+    &--hidden {
+      display: inline-block;
+    }
+  }
+}

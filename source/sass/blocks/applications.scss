@@ -1,0 +1,56 @@
+.applications {
+  @include background_image;
+  min-height: 466px;
+  color: $white;
+
+  &--background {
+    min-height: 241px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-position: center 20%;
+    background-size: cover;
+  }
+}
+
+.applications__name {
+  @include font-style(24px, 30px, lighter);
+  @include reset;
+
+  color: $white;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin: $center;
+}
+
+@include respond-to(tablet) {
+  .applications {
+    min-height: 200px;
+  }
+
+  .title--background {
+    min-height: 440px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center;
+  }
+
+  .applications__name {
+    @include font-style(50px, 60px, lighter);
+
+    padding-top: 180px;
+  }
+}
+
+@include respond-to(desktop) {
+  .title--background {
+    min-height: 395px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center;
+  }
+
+  .applications__name {
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 172px;
+    padding-bottom: 50px;
+  }
+}

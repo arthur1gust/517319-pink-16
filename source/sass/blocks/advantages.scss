@@ -1,0 +1,177 @@
+.advantages {
+  padding-top: 40px;
+  width: auto;
+}
+
+// Непонятно как сделать фон
+.advantages-container {
+  background-color: $gray;
+  background-size: 100%;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.advantages__offer {
+  @include font-style(24px, 30px, lighter);
+
+  margin-bottom: 32px;
+}
+
+.advantages__title {
+  @include font-style(24px, 30px, lighter);
+  @include reset;
+}
+
+.advantages__inner {
+  @include reset-list();
+
+  text-align: center;
+  padding-bottom: 287px;
+  padding-top: 59px;
+  position: relative;
+  margin: $center;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::after {
+    @include location;
+
+    bottom: -10%;
+    left: 50%;
+    width: 157px;
+    height: 320px;
+    transform: translateX(-50%);
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.advantages__name {
+  @include reset;
+  @include font-style(18px, 30px, bold);
+
+  margin-top: 17px;
+  margin-bottom: 9px;
+}
+
+.advantages__text {
+  @include reset;
+  @include font-style(14px, 24px, normal);
+}
+
+.advantages__subtitle {
+  @include reset;
+
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.advantages__item {
+  margin-bottom: 29px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@include respond-to(tablet) {
+  .advantages {
+    padding-top: 48px;
+  }
+
+  .advantages__inner {
+    padding-left: 45%;
+    padding-top: 70px;
+    padding-bottom: 15px;
+
+    &::after {
+      left: 0;
+      width: 268px;
+      height: 547px;
+      bottom: -15%;
+      transform: translateX(0);
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      background-size: 100%;
+    }
+  }
+
+  .advantages__offer {
+    @include font-style(40px, 48px, lighter);
+    margin-bottom: 47px;
+  }
+
+  .advantages__title {
+    @include font-style(40px, 50px, lighter);
+  }
+
+  .advantages__subtitle {
+    width: 58%;
+    margin: $center;
+  }
+
+  .advantages__name {
+    text-align: left;
+  }
+
+  .advantages__text {
+    text-align: left;
+  }
+}
+
+@include respond-to(desktop) {
+  .advantages {
+    padding-top: 64px;
+  }
+
+  .advantages__inner {
+    position: static;
+    padding: 0;
+    display: flex;
+    background-image: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__offer {
+    @include font-style(50px, 60px, lighter);
+
+    margin-bottom: 75px;
+  }
+
+  .advantages__title {
+    @include font-style(50px, 60px, lighter);
+  }
+
+  .advantages__item {
+    width: 33%;
+    flex-grow: 1;
+    padding: 0 4.2%;
+    padding-top: 305px;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    }
+  }
+
+  .advantages__name {
+    @include font-style(30px, 30px, bold);
+
+    margin-top: 55px;
+    margin-bottom: 25px;
+  }
+
+  .advantages__text {
+    @include font-style(18px, 30px, normal);
+  }
+}

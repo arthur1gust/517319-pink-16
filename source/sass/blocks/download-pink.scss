@@ -1,0 +1,143 @@
+.download-pink {
+  color: $white;
+  background-color: $blue;
+  padding-top: 28px;
+  text-align: center;
+  width: auto;
+}
+
+.download-pink__name {
+  @include reset;
+}
+
+.download-pink__button {
+  width: 280px;
+  box-sizing: border-box;
+  margin: $center;
+  margin-bottom: 35px;
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($red, 0.3);
+  }
+}
+
+.download-pink_list {
+  margin: $center;
+  margin-bottom: 20px;
+}
+
+.download-pink__os {
+  @include reset;
+  @include font-style(14px, 24px, lighter);
+
+  padding-bottom: 30px;
+}
+
+@include respond-to(tablet) {
+  .download-pink {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .download-pink_list {
+    width: 48.4%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .download-pink__os {
+    font-size: 18px;
+    width: 48.4%;
+  }
+
+  .download-pink__button {
+    font-size: 18px;
+    background-color: transparent;
+    width: 48.4%;
+    margin: 0;
+    margin-bottom: 47px;
+  }
+
+  .download-pink__name {
+    @include font-style(40px, 50px, lighter);
+
+    display: block;
+    padding: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 28px;
+    width: 48.4%;
+    box-sizing: border-box;
+  }
+}
+
+@include respond-to(desktop) {
+  .download-pink__container {
+    padding-left: 15px;
+  }
+
+  .download-pink__name {
+    @include font-style(50px, 60px, lighter);
+
+    margin-top: 17px;
+    margin-bottom: 53px;
+    width: 31.57%;
+    min-width: 300px;
+    padding: 0;
+  }
+
+  .download-pink__button {
+    margin-bottom: 70px;
+    width: 31.57%;
+    min-width: 300px;
+  }
+
+  .download-pink_list {
+    min-width: 300px;
+    margin-bottom: 52px;
+    width: 31.57%;
+  }
+
+  .download-pink__os {
+    font-size: 18px;
+    width: 31.57%;
+    min-width: 300px;
+  }
+}
+
+.list-icon {
+  @include reset-list();
+  margin: 0 auto;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.list-icon__link {
+  @include link;
+  @include background_image;
+
+  width: 60px;
+  height: 56px;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--microsoft {
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}
