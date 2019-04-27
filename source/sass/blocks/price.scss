@@ -1,186 +1,307 @@
 .price {
-  overflow: hidden;
-  background-color: $gray;
-  position: relative;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .table__container {
-  margin: $center;
+  position: relative;
+  background-color: $grey-light;
   padding-top: 91px;
-  background-size: cover;
-  width: 320px;
+  padding-bottom: 42px;
+  max-width: 100%;
+  overflow: hidden;
+  /* Косой треугольник */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg-triangle-white.svg");
+    background-color: $grey-light;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 25px;
+    z-index: 0;
+  }
+
+  @include respond-to(tablet) {
+    padding-top: 88px;
+    padding-bottom: 68px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      //left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bg-triangle-white.svg");
+      background-color: $grey-light;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% 50px;
+      z-index: 0;
+    }
+  }
+
+  @include respond-to(desktop) {
+    padding-top: 140px;
+    padding-bottom: 96px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bg-triangle-white.svg");
+      background-color: $grey-light;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% 65px;
+      z-index: 0;
+    }
+  }
 }
 
 .tables-price {
   @include font-style(14px, 30px, normal);
 
-  border-collapse: collapse;
-  //width: 100%;
-  transform: translateX(-33.33%);
-  border: $table-border;
-  margin-bottom: 34px;
-  min-width: (278 * 3);
-}
-
-.table__name {
-  @include font-style(18px, 30px, bold);
-
-  text-transform: uppercase;
-  background-color: $blue;
-  color: $white;
-  box-sizing: border-box;
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 15px;
-  padding-bottom: 21px;
-  border-right: $table-border;
+  left: 50%;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+  width: 262%;
 
-  &--hit {
-    &::before {
-      @include location;
+  @include respond-to(desktop) {
+    width: 100%;
+  }
+}
+/*
+.table__name {
+  @include respond-to(phone) {
+    display: none;
+  }
+}
+*/
+.table__name {
+  position: relative;
+  background-color: $blue-dark;
+  color: $white;
+  text-transform: uppercase;
+  padding: 20px;
+  padding-top: 17px;
+  background-clip: padding-box;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1px;
 
-      width: 74px;
-      height: 73px;
-      background-image: url("../img/bg-hit.svg");
+  @include respond-to(tablet) {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    width: 25%;
+  }
+
+  @include respond-to(desktop) {
+    padding: 20px;
+    padding-top: 17px;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border-right: none;
+  }
+
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url("../img/bg-hit.svg") no-repeat top left;
+    background-size: 74px 73px;
+
+    @media (min-width: 660px) and (max-width: 959px) {
+      width: 61px;
+      height: 61px;
+      background: url("../img/bg-hit-tablet.svg") no-repeat top left;
+      background-size: 61px 61px;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    @include respond-to(tablet) {
       top: 0;
       left: 0;
     }
+  }
+}
 
-    &::after {
-      @include location($content: "ХИТ");
-      @include font-style(14px, 30px, lighter);
+.table__hit {
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  width: 78px;
+  height: 73px;
+  transform: rotate(-45deg);
+  font-weight: 400;
+  z-index: 20;
 
-      transform: rotate(-45deg);
-      top: 10px;
-      left: 13px;
-    }
+  @include respond-to(tablet) {
+    top: 1px;
+    left: 2px;
+    width: 61px;
+    height: 61px;
+  }
+
+  @include respond-to(desktop) {
+    top: 6px;
+    left: 3px;
+    width: 78px;
+    height: 73px;
   }
 }
 
 .table__feature {
-  border: $table-border;
+  position: relative;
+  border-top: 0;
+  padding-top: 17px;
+  padding-right: 68px;
+  padding-bottom: 18px;
   padding-left: 22px;
-  padding-top: 15px;
-  padding-bottom: 14px;
-  text-transform: uppercase;
-}
+  background-color: $white;
+  border: 2px solid $grey;
+  border-top-width: 0;
+  background-clip: padding-box;
 
-.table__feature-name {
-  @include reset;
+  @include respond-to(tablet) {
+    padding: 7px 16px 8px;
+  }
 
-  text-align: left;
-  background-color: transparent;
+  @include respond-to(desktop) {
+    padding: 16px 22px 13px;
+  }
+
+  &--title {
+    border-top-width: 2px;
+
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
 }
 
 .table__price {
-  @include font-style(24px, 30px, lighter);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+
+  @media (min-width: 660px) and (max-width: 959px) {
+    font-size: 18px;
+  }
 }
 
-@include respond-to(tablet) {
-  .price {
-    padding-bottom: 70px;
-  }
+.table__feature-name {
+  position: absolute;
+  display: block;
+  width: 31px;
+  height: 30px;
+  top: 13px;
+  right: 17px;
+  //text-indent: -10px;
+  overflow: hidden;
 
-  .table__container {
+  @media (min-width: 280px) {
+    position: relative;
+    top: auto;
+    right: auto;
     margin-left: auto;
     margin-right: auto;
-    overflow: visible;
-    padding-top: 86px;
-    box-sizing: border-box;
   }
 
-  .table__feature {
-    text-transform: none;
-    box-sizing: border-box;
-    text-align: left;
-    min-width: 0;
-    width: 20%;
-    padding-left: 14px;
-    padding-top: 7px;
-    padding-bottom: 8px;
-
-    &--checked {
-      background-position: 50% 50%;
-      background-size: 31px 21px;
-    }
-
-    &--unchecked {
-      background-position: 50% 50%;
-      background-size: 27px 26px;
-    }
+  &--on {
+    background: url("../img/icon-yes.svg") no-repeat center;
+    background-size: 31px 21px;
   }
 
-  .table__feature-name {
+  &--off {
+    background: url("../img/icon-no.svg") no-repeat center;
+    background-size: 27px 26px;
+  }
+}
+
+.table__pagination {
+  margin-bottom: 26px;
+  width: 100%;
+
+  @include respond-to(tablet) {
     display: none;
   }
+}
 
-  .tables-price {
-    transform: translateX(0);
-    min-width: 620px;
-    margin: $center;
-    //width: 20px;
-  }
+.pagination {
+  @include reset;
 
-  .table__price {
-    @include font-style(18px, 30px, lighter);
-  }
+  border: none;
+  width: 25%;
+  margin: $center;
+  text-align: center;
+}
 
-  .table__name {
-    @include font-style(16px, 30px, bold);
+.table__pagination--item {
+  font-size: 10px;
+  border: none;
+  width: 15px;
+  height: 20px;
+  background: transparent;
+  color: transparent;
+  padding: 0;
+  position: relative;
 
-    width: 20%;
-    padding-top: 12px;
-    padding-bottom: 5px;
-    min-width: 0;
-  }
+  &::before {
+    @include location($position: absolute);
+    width: 7px;
+    height: 7px;
+    background-color: #0a0a0a;
+    border-radius: 50%;
+    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  .table__name--hit {
-    &::before {
-      background-image: url("../img/bg-hit-tablet.svg");
-      width: 61px;
-      height: 61px;
+    &:hover {
+      opacity: 0.6;
     }
 
-    &::after {
-      left: 8px;
-      top: 3px;
+    &:active {
+      opacity: 0.1;
     }
   }
 }
 
-@include respond-to(desktop) {
-  .price {
-    padding-bottom: 98px;
-  }
-
-  .table__container {
-    margin-top: 0;
-    padding-top: 190px;
-  }
-
-  .tables__price {
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  .table__name {
-    @include font-style(18px, 30px, bold);
-
-    padding-bottom: 20px;
-    padding-top: 15px;
-  }
-
-  .table__price {
-    @include font-style(24px, 30px, lighter);
-  }
-
-  .table__feature {
-    @include font-style(18px, 30px, normal);
-
-    padding-left: 22px;
-    padding-top: 13px;
-    padding-bottom: 14px;
-    text-align: left;
-  }
+.pagination__item‐‐active::before {
+  @include location;
+  opacity: 1;
+  width: 7px;
+  height: 7px;
+  border: 3px solid $blue;
+  border-radius: 50%;
+  background-color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
