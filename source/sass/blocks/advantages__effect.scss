@@ -1,126 +1,128 @@
-.effect {
-  @include font-style(14px, 24px, normal);
-
-  padding-top: 59px;
-  text-align: left;
+.advantages__effect {
   display: none;
-  min-height: 300px;
-  background-color: $white;
-}
 
-.effect__container {
-  position: relative;
-}
-
-.advantages--effect__title {
-  @include reset;
-  @include font-style(30px, 36px, bold);
-
-  text-align: left;
-}
-
-.advantages--effect__link {
-  color: $red;
-  display: block;
-}
-
-@include respond-to(tablet) {
-  .effect {
+  @include respond-to(tablet) {
     display: block;
-    position: relative;
   }
 
-  .effect__svg {
-    position: absolute;
-
-    &::after {
-      @include location($content: "24");
-      @include font-style(96px, 149.47px, bold);
-      @include background_image;
-
-      color: $red;
-      width: 162px;
-      height: 162px;
-      border: 20px solid $red;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -43%);
-    }
-  }
-
-  .advantages--effect__title {
-    width: 50%;
-    margin-left: auto;
-    padding-right: 22.9px;
-    padding-top: 40px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-  }
-
-  .advantages--effect__text {
-    width: 50%;
-    margin-left: auto;
-    box-sizing: border-box;
-    margin-top: 0;
-    margin-bottom: 8px;
-  }
-
-  .advantages--effect__link {
-    width: 50%;
-    margin-left: auto;
-
-    &:hover {
-      color: $blue;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  @include respond-to(desktop) {
+    display: block;
   }
 }
 
-@include respond-to(desktop) {
-  .effect {
-    min-height: 418px;
-    background-color: $gray;
-    padding-top: 30px;
-    padding-bottom: 0;
+.advantages__effect-inner {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-to(tablet) {
+    width: 606px;
   }
 
-  .effect__svg {
-    left: 10px;
+  @include respond-to(desktop) {
+    width: 896px;
+  }
+}
+
+.advantages__timer {
+  position: relative;
+  margin-left: -46px;
+  margin-right: 71px;
+  width: 240px;
+  height: 278px;
+  flex-shrink: 0;
+
+  &::before {
+    content: "24";
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    top: 78px;
+    left: 50%;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 149px;
+    transform: translateX(-50%);
+    color: $pink;
+  }
+
+  @include respond-to(desktop) {
     width: 298px;
     height: 345px;
+    margin-right: 67px;
 
-    &::after {
-      @include font-style(120px, 186.84px, bold);
-
-      width: 213px;
-      height: 213px;
-      transform: translate(-50%, -41%);
+    &::before {
+      top: 95px;
+      font-size: 120px;
+      line-height: 186.84px;
     }
-
-    & svg {
-      width: 298px;
-      height: 345px;
-    }
-  }
-
-  .advantages--effect__title {
-    padding-top: 100px;
-    width: 60.4%;
-    margin-bottom: 23px;
-  }
-
-  .advantages--effect__text {
-    @include font-style(18px, 30px, normal);
-    text-align: left;
-    margin-bottom: 35px;
-    padding-right: 5.7%;
-  }
-
-  .advantages--effect__link {
-    width: 60.4%;
   }
 }
+
+.advantages__timer-icon {
+  width: 238px;
+  height: 276px;
+
+  @include respond-to(desktop) {
+    width: 298px;
+    height: 345px;
+  }
+}
+
+.advantages__effect-lead {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 23px;
+  width: 298px;
+
+  @include respond-to(desktop) {
+    padding-top: 91px;
+    padding-left: 0;
+    padding-right: 40px;
+    padding-bottom: 115px;
+    font-size: 18px;
+    line-height: 30px;
+    width: 524px;
+  }
+}
+
+.advantages__effect-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 30px;
+  line-height: 36px;
+  color: $black;
+
+  @include respond-to(tablet) {
+    max-width: 170px;
+  }
+
+  @include respond-to(desktop) {
+    margin-bottom: 20px;
+    max-width: 292px;
+  }
+}
+
+.advantages__effect-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+  width: 330px;
+
+  @include respond-to(desktop) {
+    margin-bottom: 30px;
+    width: 530px;
+  }
+}
+
+.advantages__effect-link-text {
+  margin: 0;
+}
+
+.advantages__effect-link {
+  color: $pink;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
