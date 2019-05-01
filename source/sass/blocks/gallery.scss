@@ -3,3 +3,39 @@
   color: $blue;
   margin-bottom: 45px;
 }
+
+.gallery__title {
+  @include font-style(14px, 30px, normal);
+  @include reset;
+
+  width: 246px;
+  margin: $center;
+  margin-top: 45px;
+  padding: 0 19px;
+  margin-bottom: 49px;
+  box-sizing: border-box;
+
+  @include respond-to(tablet) {
+    width: 600px;
+    @include font-style(18px, 30px, normal);
+
+    margin-top: 90px;
+    margin-bottom: 70px;
+    padding: 0 85px;
+  }
+
+  @include respond-to(desktop) {
+    @include font-style(18px, 30px, normal);
+
+    margin-bottom: 90px;
+    width: 770px;
+
+    & span {
+      display: block;
+    }
+  }
+}
+
+.gallery__list {
+  @include reset-list();
+}
