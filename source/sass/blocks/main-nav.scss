@@ -6,17 +6,17 @@
   padding: 0;
   position: relative;
 
-  @media (min-width: $tablets) {
-    width: 660px;
+  @include respond-to(tablet) {
     margin: $center;
     padding: 0;
+    width: 660px;
   }
 
-  @media (min-width: $desktops) {
+  @include respond-to(desktop) {
     display: block;
     border-top: none;
-    width: 960px;
-    margin: $center;
+    width: 620px;
+    margin-left: -500px;
     padding: 0;
   }
 }
@@ -28,18 +28,18 @@
 
   @include reset-list;
 
-  @media (min-width: $tablets) {
+  @include respond-to(tablet) {
     margin-top: 0;
   }
 
-  @media (min-width: $desktops) {
+  @include respond-to(desktop) {
     display: block;
     border-top: none;
   }
 }
 
 .main-nav__item {
-  @media (min-width: $desktops) {
+  @include respond-to(desktop) {
     margin-left: 80px;
 
     &:first-child {
@@ -76,7 +76,7 @@
   box-shadow: 0 -1px 0 $black,
     inset 0 1px 0 rgba($white, 0.15);
 
-  @media (min-width: $desktops) {
+  @include respond-to(desktop) {
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -101,31 +101,95 @@
   height: 24px;
   padding: 0;
   position: absolute;
-  top: 20px;
+  top: -50px;
   right: 30px;
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
+
+  @include respond-to(tablet) {
+    top: -65px;
+  }
+
+  @include respond-to(desktop) {
+    display: none;
+  }
 }
 
-.main-nav--close .main-nav__trigger::before {
-  @include location;
-
-  top: 0;
-  right: 0;
+.main-nav--closed .main-nav__trigger span {
+  display: block;
   width: 50px;
-  height: 2px;
-  background-color: #ffffff;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 1px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+/* Для JS - крестик*/
+.main-nav--opened .main-nav__trigger span {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 29px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
-.main-nav--close .main-nav__trigger:hover::before {
-  background-color: $white;
-  box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+.main-nav__trigger:hover span,
+.main-nav__trigger:hover span::before,
+.main-nav__trigger:hover span::after {
+  background-color: $pink;
 }
 
-.main-nav--close .main-nav__trigger:active::before {
-  background-color: rgba($white, 0.3);
-  box-shadow: 0 8px 0 0 rgba($red, 0.3), 0 16px 0 0 rgba($red, 0.3);
+.main-nav__trigger:active span,
+.main-nav__trigger:active span::before,
+.main-nav__trigger:active span::after {
+  background: rgba($pink, 0.3);
+}
+
+@media (max-width: 959px) {
+  .main-nav--closed .main-nav__items {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__trigger {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__items {
+    display: block;
+  }
 }
 
 .page-header-open .main-nav__trigger {
@@ -160,31 +224,6 @@
   }
 }
 
-.main-nav--withoutjs .main-nav__trigger {
-  //display: none;
-}
-
-.main-nav--withoutjs .main-nav__items {
-  position: static;
-}
-
-.main-nav--withoutjs .main-nav__item {
-  display: block;
-}
-
-.main-nav--close .main-nav__item {
-  /* display: none; */
-}
-
-.main-nav--close .main-nav__items {
-  background-color: transparent;
-}
-
-.main-nav--open .main-nav__items {
-  z-index: 10;
-  background-color: $blue;
-}
-
 .main-nav__link {
   @include font-style(18px, 32px, bold);
   @include link;
@@ -207,17 +246,10 @@
   outline: none;
 }
 
-@include respond-to(tablet) {
-  .main-nav__button {
-    right: 3.1%;
-    top: 44px;
-  }
-}
-
 @include respond-to(desktop) {
   .main-nav {
-    //width: 67.8%;
     //display: flex;
+    //border: 1px solid green;
   }
 
   .main-nav__list {
@@ -245,14 +277,6 @@
     width: auto;
   }
 
-  .main-nav--open .main-nav__items {
-    background-color: transparent;
-  }
-
-  .main-nav__trigger {
-    display: none;
-  }
-
   .main-nav__link {
     @include font-style(18px, 18px, normal);
 
@@ -274,9 +298,5 @@
       color: inherit;
       opacity: 0.3;
     }
-  }
-
-  .main-nav__button {
-    //display: none;
   }
 }

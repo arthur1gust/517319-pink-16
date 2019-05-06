@@ -1,28 +1,74 @@
 .map {
-  //min-height: 230px;
-  //position: relative;
+  position: relative;
   overflow: hidden;
-  //width: 320px;
+  width: 320px;
   min-height: 200px;
-  width: auto;
   margin: $center;
-  background-image: url("../img/bg-map-mobile@1x.png");
+
+  &::before {
+    @include location;
+    background-image: url("../img/icon-map-marker.svg");
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    top: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.map-container::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-position: top, left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 100;
+  width: 320px;
+  height: 35px;
+  left: 0;
+}
+
+.map__image {
+  width: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  z-index: 1;
 }
 
 @include respond-to(tablet) {
   .map {
     width: 660px;
     min-height: 375px;
-    margin: $center;
-    background-image: url("../img/bg-map-tablet@1x.jpg");
+    margin-top: -50px;
+  }
+
+  .map__image {
+    width: 660px;
+  }
+
+  .map-container::before {
+    width: 660px;
+    height: 70px;
   }
 }
 
 @include respond-to(desktop) {
   .map {
     width: 960px;
-    min-height: 506px;
-    margin: $center;
-    background-image: url("../img/bg-map-desktop@1x.jpg");
+    min-height: 516px;
+  }
+
+  .map__image {
+    width: 960px;
+  }
+
+  .map-container::before {
+    width: 960px;
+    height: 104px;
   }
 }

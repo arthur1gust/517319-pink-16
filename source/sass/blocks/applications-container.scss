@@ -1,23 +1,45 @@
 .applications-container {
   @include background_image;
 
+  width: 320px;
+  margin: $center;
+  min-height: 462px;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 40.5%, 50% 0;
+  background-position: 0 40%, 50% 10%;
   background-size: 80%, cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+  }
+
 }
 
 @include respond-to(tablet) {
   .applications-container {
-    min-height: 660px;
+    min-height: 720px;
+    width: 660px;
+    margin: $center;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-position: 52% 100%, 50% 0;
-    background-size: 106%, cover;
+    background-size: 96%, cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 }
 
 @include respond-to(desktop) {
   .applications-container {
-    min-height: 960px;
+    min-height: 850px;
+    width: 960px;
+    margin: $center;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+      background-position: 95% 100%, 50% 0;
+      background-size: 87%, cover;
+    }
   }
 }

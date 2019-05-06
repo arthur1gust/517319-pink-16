@@ -8,6 +8,8 @@
 
 .download-pink__name {
   @include reset;
+
+  display: none;
 }
 
 .download-pink__button {

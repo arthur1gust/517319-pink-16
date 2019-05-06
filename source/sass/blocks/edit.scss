@@ -33,7 +33,7 @@
 
 .edit label {
   position: absolute;
-  width: 72%;
+  width: 239px;
   height: 30px;
   bottom: 0;
   left: 50%;
@@ -42,7 +42,7 @@
 }
 
 .edit__item {
-  width: 33%;
+  width: 273px;
   padding-bottom: 40px;
 }
 
@@ -69,7 +69,7 @@
   background-color: $white;
   border-radius: 50%;
   top: 14px;
-  left: 30px;
+  left: 50px;
 }
 
 .edit__range:active + label::after {
@@ -82,7 +82,7 @@
   }
 
   .edit__item {
-    width: 100%;
+    width: 255px;
     box-sizing: border-box;
     border-bottom: $table-border;
     padding-bottom: 20px;
@@ -93,7 +93,7 @@
   }
 
   .edit label {
-    width: 67.4%;
+    width: 200px;
     position: relative;
     left: 0;
     transform: translateX(0);
@@ -129,7 +129,10 @@
     padding-right: 60px;
   }
 
+  .edit__item {
+    width: 410px;
+  }
   .edit label {
-    width: 61%;
+    width: 286px;
   }
 }
