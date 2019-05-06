@@ -17,6 +17,7 @@
 
   @include respond-to(tablet) {
     width: 600px;
+
     @include font-style(18px, 30px, normal);
 
     margin-top: 90px;

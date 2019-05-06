@@ -13,7 +13,6 @@
 }
 
 .photo-load__container {
-  width: auto;
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -53,7 +52,7 @@
     padding-bottom: 55px;
   }
 
-  .photo-load__wrapper .main-container {
+  .photo-load__container .photo-main__container {
     background-color: $gray;
     display: flex;
     flex-wrap: wrap;
@@ -61,13 +60,14 @@
   }
 
   .photo-load__filters {
-    width: 50%;
-    padding-top: 55px;
+    width: 256px;
+    padding-top: 45px;
     padding-bottom: 55px;
   }
 
   .photo-load__button {
     width: 260px;
+    //margin-top: 50px;
   }
 }
 
@@ -81,11 +81,18 @@
     background-color: $white;
   }
 
+  .photo-load__filters {
+    width: 486px;
+    //padding-top: 45px;
+    //padding-bottom: 55px;
+  }
+
   .option__range {
     display: block;
   }
 
   .photo-load__button {
+    //margin-top: 50px;
     width: 186px;
     display: inline-block;
   }
