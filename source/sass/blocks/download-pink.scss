@@ -83,7 +83,9 @@
 
 @include respond-to(desktop) {
   .download-pink__container {
-    padding-left: 15px;
+    padding-left: 10px;
+    //padding-top: -30px;
+    //margin-top: -30px;
   }
 
   .download-pink__name {
@@ -97,6 +99,8 @@
   }
 
   .download-pink__button {
+    @include font-style(21px, 20px, bold);
+
     margin-bottom: 70px;
     width: 31.57%;
     min-width: 300px;

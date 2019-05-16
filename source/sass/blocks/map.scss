@@ -4,6 +4,7 @@
   width: 320px;
   min-height: 200px;
   margin: $center;
+  margin-top: -15px;
 
   &::before {
     @include location;
@@ -12,8 +13,12 @@
     width: 36px;
     height: 36px;
     z-index: 2;
-    top: 50%;
+    top: 38%;
     transform: translate(-50%, 50%);
+
+    @include respond-to(tablet) {
+      top: 47%;
+    }
   }
 }
 
@@ -60,7 +65,12 @@
 @include respond-to(desktop) {
   .map {
     width: 960px;
-    min-height: 516px;
+    min-height: 489px;
+    margin-top: -77px;
+
+    &::before {
+      top: 48%;
+    }
   }
 
   .map__image {

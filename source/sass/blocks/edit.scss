@@ -2,10 +2,12 @@
   @include reset-list();
 
   display: flex;
-  width: 100%;
+  width: 274px;
   box-sizing: border-box;
   justify-content: center;
   position: relative;
+  margin-top: 13px;
+  margin-left: 6px;
 }
 
 .edit__toggle {
@@ -29,6 +31,16 @@
     fill: $red;
     opacity: 1;
   }
+
+  @include respond-to(tablet) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include respond-to(desktop) {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .edit label {
@@ -42,8 +54,19 @@
 }
 
 .edit__item {
-  width: 273px;
+  width: 80px;
   padding-bottom: 40px;
+}
+
+.edit__item:first-child svg {
+  //padding-left: -10px;
+  margin-left: -5px;
+  fill: $red;
+  opacity: 1;
+}
+
+.edit__item:nth-child(2) svg {
+  margin-left: -5px;
 }
 
 .edit .edit__range--hidden {
@@ -58,6 +81,10 @@
   top: 0;
   left: 0;
   border-bottom: 2px solid $blue;
+
+  @include respond-to(desktop) {
+    margin-left: -12px;
+  }
 }
 
 .edit__range + label::after {
@@ -70,6 +97,48 @@
   border-radius: 50%;
   top: 14px;
   left: 50px;
+
+  @include respond-to(tablet) {
+    left: 150px;
+  }
+
+  @include respond-to(desktop) {
+    left: 350px;
+  }
+}
+
+.edit__range-first + label::after {
+  left: 192px;
+
+  @include respond-to(tablet) {
+    left: 145px;
+  }
+
+  @include respond-to(desktop) {
+    left: 55px;
+  }
+}
+
+.edit__range-second + label::after {
+
+  @include respond-to(tablet) {
+    left: 25px;
+  }
+
+  @include respond-to(desktop) {
+    left: 233px;
+  }
+}
+
+.edit__range-third + label::after {
+
+  @include respond-to(tablet) {
+    left: 95px;
+  }
+
+  @include respond-to(desktop) {
+    left: 145px;
+  }
 }
 
 .edit__range:active + label::after {
@@ -82,11 +151,12 @@
   }
 
   .edit__item {
-    width: 255px;
+    width: 275px;
+    height: 72px;
     box-sizing: border-box;
     border-bottom: $table-border;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 7px;
+    padding-top: 7px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,7 +165,8 @@
   .edit label {
     width: 200px;
     position: relative;
-    left: 0;
+    left: -20px;
+    top: -5px;
     transform: translateX(0);
     margin: 0;
   }
@@ -106,6 +177,8 @@
 
   .edit__toggle {
     outline: none;
+    margin-left: -8px;
+    margin-top: 4px;
   }
 
   .edit__toggle svg {
@@ -131,8 +204,47 @@
 
   .edit__item {
     width: 410px;
+    margin-left: 14px;
   }
+
   .edit label {
     width: 286px;
+  }
+
+  .edit__toggle {
+    outline: none;
+    margin-left: -1px;
+    margin-top: 4px;
+  }
+}
+
+.edit__button {
+  width: 320px;
+  margin: $center;
+  padding-top: 30px;
+  margin-left: -20px;
+  margin-top: 25px;
+  border-top: 1px solid #dddfe0;
+  padding-bottom: 15px;
+
+  @include respond-to(tablet) {
+    border: 0;
+    padding-top: 1px;
+    margin-top: 15px;
+    min-height: 220px;
+  }
+
+  @include respond-to(desktop) {
+    border: 0;
+    width: 460px;
+    min-height: 120px;
+    margin-top: 94px;
+    margin-left: -25px;
+  }
+}
+
+@include respond-to(tablet) {
+  .photo-load__button:nth-child(2) {
+    margin-top: 25px;
   }
 }

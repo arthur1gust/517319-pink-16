@@ -2,6 +2,19 @@
   @include font-style(14px, 30px, normal);
 
   color: $blue;
+  margin-top: -28px;
+
+  @include respond-to(tablet) {
+    width: 660px;
+    margin: $center;
+    margin-top: -63px;
+  }
+
+  @include respond-to(desktop) {
+    width: 960px;
+    margin: $center;
+    margin-top: -63px;
+  }
 }
 
 .photo-load__title {
@@ -9,7 +22,20 @@
 
   background-color: $white;
   padding: 0;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
+  width: 258px;
+  margin: $center;
+  min-height: 132px;
+
+  @include respond-to(tablet) {
+    width: 500px;
+    padding-top: 62px;
+  }
+
+  @include respond-to(desktop) {
+    width: 500px;
+    padding-top: 68px;
+  }
 }
 
 .photo-load__container {
@@ -17,14 +43,22 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $gray;
-}
-
-.photo-load__image {
+  width: 320px;
   margin: $center;
-  margin-bottom: 40px;
-  width: 280px;
-  height: 373px;
-  overflow: hidden;
+
+  @include respond-to(tablet) {
+    width: 660px;
+    margin: $center;
+  }
+
+  @include respond-to(desktop) {
+    width: 940px;
+    margin: $center;
+    //padding-top: 28px;
+    //min-height: 125px;
+    margin-top: -18px;
+    //padding-top: -30px;
+  }
 }
 
 .photo-load__button {
@@ -48,8 +82,9 @@
     width: 300px;
     height: 400px;
     margin: 0;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    //padding-top: 25px;
+    //padding-bottom: 55px;
+    margin-top: 38px;
   }
 
   .photo-load__container .photo-main__container {
@@ -60,29 +95,45 @@
   }
 
   .photo-load__filters {
-    width: 256px;
-    padding-top: 45px;
-    padding-bottom: 55px;
+    width: 280px;
+    min-height: 380px;
+    margin-top: 8px;
+    //padding-top: 45px;
+    //padding-bottom: 55px;
   }
 
   .photo-load__button {
     width: 260px;
-    //margin-top: 50px;
+    margin-top: 50px;
   }
 }
 
 @include respond-to(desktop) {
   .photo-load__image {
-    padding-left: 80px;
+    //padding-left: 80px;
+    margin-left: 70px;
+    margin-top: 56px;
+    padding-bottom: 40px;
   }
 
   .photo-load__container {
-    padding: 55px 0;
+    //padding: 55px 0;
     background-color: $white;
   }
 
+  .photo-main__container {
+    margin: $center;
+    width: 940px;
+  }
+
   .photo-load__filters {
-    width: 486px;
+    width: 480px;
+    min-height: 485px;
+    margin-top: 27px;
+    //margin-left: -100px;
+    //padding-left: -200px;
+    //margin: $center;
+    padding: 0;
     //padding-top: 45px;
     //padding-bottom: 55px;
   }
@@ -92,8 +143,10 @@
   }
 
   .photo-load__button {
-    //margin-top: 50px;
-    width: 186px;
+    margin-top: 50px;
+    margin-left: 38px;
+    //padding-top: 50px;
+    width: 184px;
     display: inline-block;
   }
 }

@@ -10,22 +10,32 @@
 
 .form-textarea__text {
   min-height: 200px;
+  padding-right: 6px;
+  word-spacing: 0.1px;
+  letter-spacing: 0.2px;
 }
 
 @include respond-to(tablet) {
   .form-textarea__text {
     min-height: 192px;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
+    width: 498px;
+    margin-left: 59px;
+    margin-top: 2px;
   }
 }
 
 @include respond-to(desktop) {
   .form-textarea {
-    width: 100%;
+    width: 940px;
   }
 
   .form-textarea__text {
-    min-height: 125px;
-    margin-bottom: 46px;
+    min-height: 126px;
+    margin-bottom: -5px;
+    width: 820px;
+    margin-top: 0px;
+    letter-spacing: 0.1px;
+    word-spacing: 0.1px;
   }
 }

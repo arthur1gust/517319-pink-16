@@ -29,7 +29,7 @@
 }
 
 .button--rounded-red {
-  @include color-btn($red, $bg-color: $white);
+  @include color-btn($red, $bg-color: transparent);
 
   &:hover {
     background-color: $red;
@@ -42,7 +42,7 @@
 }
 
 .button--rounded-gray {
-  @include color-btn($gray-button, $bg-color: $white);
+  @include color-btn($gray-button, $bg-color: transparent);
 
   &:hover {
     border-color: rgba($blue, 0.3);
@@ -53,12 +53,5 @@
   &:active {
     background-color: rgba($blue, 0.3);
     color: rgba($white, 0.3);
-  }
-}
-
-
-@include respond-to(tablet) {
-  .button {
-    @include font-style(21px, 18px, bold);
   }
 }
