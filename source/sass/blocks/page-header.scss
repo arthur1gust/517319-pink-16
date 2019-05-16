@@ -8,12 +8,15 @@
 
   @include respond-to(tablet) {
     width: 660px;
+    margin: $center;
+    //margin-left: 20px;
   }
 
   @include respond-to(desktop) {
     width: 960px;
-    padding-top: 15px;
-    padding-left: 0px;
+    margin: $center;
+    padding-top: -1px;
+    padding-left: 1px;
     box-sizing: border-box;
   }
 }
@@ -23,6 +26,14 @@
   flex-direction: column;
   align-items: baseline;
   margin: $center;
+  //height: 100px;
+
+  @include respond-to(desktop) {
+    //padding: 22px 0px;
+    //margin-top: -10px;
+    padding-top: -5px;
+    align-self: center;
+  }
 }
 
 .page-header__container-logo {
@@ -30,8 +41,18 @@
   text-align: left;
   //display: flex;
   //justify-content: space-between;
-  padding: 21px 20px;
+  padding: 22px 20px;
   //width: 120px;
+
+  @include respond-to(tablet) {
+    padding: 22px 20px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 22px 0px;
+    //margin-top: 10px;
+    width: 120px;
+  }
 }
 
 .page-header--open {
@@ -44,6 +65,11 @@
   color: $white;
   width: 75px;
   height: 22px;
+
+  @include respond-to(desktop) {
+    //padding: 22px 0px;
+    margin-top: 5px;
+  }
 }
 
 .page-header__logo svg {
@@ -51,6 +77,10 @@
   margin-left: -72px;
   margin-top: -20px;
   fill: $white;
+
+  @include respond-to(desktop) {
+    margin-top: -6px;
+  }
 }
 
 .page-header__logo[href] svg {

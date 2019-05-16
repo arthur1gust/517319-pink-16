@@ -1,0 +1,58 @@
+.modal {
+  @include font-style(14px, 24px, normal);
+
+  position: absolute;
+  z-index: 120;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  color: $blue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 320px;
+
+  &--error {
+    display: none;
+  }
+
+  &--done {
+    display: none;
+  }
+}
+
+.modal__title {
+  @include reset;
+
+  color: #000000;
+  font-weight: bold;
+  padding: 0 10px;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+.modal__text {
+  @include reset;
+
+  margin-bottom: 35px;
+  padding: 0 10px;
+}
+
+.modal__button {
+  margin: $center;
+  margin-bottom: 50px;
+  width: 280px;
+}
+
+@include respond-to(tablet) {
+  .modal {
+    width: 460px;
+    min-height: 364px;
+  }
+}
+
+@include respond-to(desktop) {
+  .modal {
+    width: 784px;
+    min-height: 380px;
+  }
+}

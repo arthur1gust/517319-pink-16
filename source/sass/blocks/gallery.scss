@@ -2,13 +2,36 @@
   background-color: $white;
   color: $blue;
   margin-bottom: 45px;
+
+  @include respond-to(tablet) {
+    width: 660px;
+    margin: $center;
+  }
+
+  @include respond-to(desktop) {
+    width: 960px;
+    margin: $center;
+  }
+}
+
+.gallery__inner {
+  margin-top: 20px;
+  //padding-top: 20px;
+
+  @include respond-to(tablet) {
+    margin-top: 28px;
+  }
+
+  @include respond-to(desktop) {
+    margin-top: 23px;
+  }
 }
 
 .gallery__title {
   @include font-style(14px, 30px, normal);
   @include reset;
 
-  width: 246px;
+  width: 286px;
   margin: $center;
   margin-top: 45px;
   padding: 0 19px;
@@ -16,7 +39,7 @@
   box-sizing: border-box;
 
   @include respond-to(tablet) {
-    width: 600px;
+    width: 660px;
 
     @include font-style(18px, 30px, normal);
 
@@ -28,7 +51,7 @@
   @include respond-to(desktop) {
     @include font-style(18px, 30px, normal);
 
-    margin-bottom: 90px;
+    margin-bottom: 88px;
     width: 770px;
 
     & span {

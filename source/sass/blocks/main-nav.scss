@@ -14,10 +14,15 @@
 
   @include respond-to(desktop) {
     display: block;
+    //min-height: 50px;
     border-top: none;
-    width: 620px;
-    margin-left: -500px;
+    width: 520px;
+    margin-left: -40px;
+    margin-top: 0px;
+    //margin-bottom: 10px;
     padding: 0;
+    //padding-top: 10px;
+    vertical-align: center;
   }
 }
 
@@ -41,6 +46,7 @@
 .main-nav__item {
   @include respond-to(desktop) {
     margin-left: 80px;
+    margin-top: -10px;
 
     &:first-child {
       margin-left: 0;
@@ -65,14 +71,14 @@
 .main-nav__item a {
   display: block;
   margin: 0;
-  background-color: $blue-dark;
+  background-color: #283645;
   color: $white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-  padding: 16px 20px;
+  padding: 15.5px 20px;
   box-shadow: 0 -1px 0 $black,
     inset 0 1px 0 rgba($white, 0.15);
 
@@ -121,7 +127,7 @@
   display: block;
   width: 50px;
   height: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 1px;
 
   &::before,
@@ -131,7 +137,7 @@
     left: 0;
     width: 50px;
     height: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 1px;
   }
 
@@ -153,7 +159,7 @@
     top: 10px;
     width: 29px;
     height: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 1px;
   }
 
@@ -248,8 +254,11 @@
 
 @include respond-to(desktop) {
   .main-nav {
-    //display: flex;
-    //border: 1px solid green;
+    display: flex;
+    align-self: center;
+    width: 650px;
+    margin-left: 180px;
+    margin-top: 22px;
   }
 
   .main-nav__list {
@@ -269,7 +278,7 @@
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    width: 940px;
+    width: 700px;
     background-color: transparent;
   }
 

@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="picturefill.min.js"></script>
   </head>
   <body>
     <svg style="display:none">
       <symbol viewBox="0 0 8.673 18.944" id="icon-facebook">
         <g>
-          <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
           <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
         </g>
       </symbol>
       <symbol viewBox="0 0 14.64 13.96" id="icon-twitter">
         <g>
-          <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
         </g>
       </symbol>
       <symbol viewBox="0 0 14.64 13.96" id="icon-youtube">
         <g>
-          <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
           <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
         </g>
       </symbol>
@@ -156,7 +154,7 @@
         <div class="advantages__container">
           <ul class="advantages__inner main-container">
             <li class="advantages__item">
-              <h3 class="advantages__name"> Поднимает настроение</h3>
+              <h3 class="advantages__name">Поднимает настроение</h3>
               <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="advantages__item">
@@ -165,7 +163,7 @@
             </li>
             <li class="advantages__item">
               <h3 class="advantages__name">Заводит новых друзей</h3>
-              <p class="advantages__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+              <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </div>
@@ -188,27 +186,26 @@
           </div>
         </div>
       </section>
-      <!-- Отзывы -->
       <section class="reviews main-container slider">
         <h2 class="visually-hidden">Отзывы о нашей компании</h2>
         <ul class="reviews__inner slider__reviews">
           <li class="reviews__item slider__item">
-            <div class="reviews__user-name slider-list">Николай Петров<br>
+            <div class="reviews__user-name slider__list">Николай Петров<br>
               <span>25 лет, водитель трамвая</span>
             </div>
-            <p class="reviews__text slider__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со свей будущей женой в комментариях к выложенной фотографии"</p>
+            <p class="reviews__text slider__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
           </li>
           <li class="reviews__item--hidden slider__item slider__item--hidden">
             <div class="reviews__user-name">Николай Петров<br>
               <span>25 лет, водитель трамвая</span>
             </div>
-            <p class="reviews__text slider__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со свей будущей женой в комментариях к выложенной фотографии"</p>
+            <p class="reviews__text slider__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
           </li>
           <li class="reviews__item---hidden slider__item slider__item--hidden">
             <div class="reviews__user-name">Николай Петров<br>
               <span>25 лет, водитель трамвая</span>
             </div>
-            <p class="reviews__text slider__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со свей будущей женой в комментариях к выложенной фотографии"</p>
+            <p class="reviews__text slider__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
           </li>
         </ul>
         <button class="reviews__direction reviews__direction--left"></button>
@@ -224,7 +221,7 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="rates__table">
           <tr class="rates__item rates__item--title">
-            <th class="visually-hidden"></th>
+            <th class="visually-hidden">Баян</th>
             <th class="rates__name ">База<br><span class="rates__price">1,99 USD</span></th>
             <th class="rates__name rates__name--hit">Стандарт<br><span class="rates__price">3,99 USD</span></th>
             <th class="rates__name ">Анлим<br><span class="rates__price">9,99 USD</span></th>
@@ -281,93 +278,24 @@
           <button class="slider__toggle" type="button">3</button>
         </p>
       </section>
-    </div>
-    <!-- Таблица
-    <div class="price main-container">
-      <section class="table__container">
-        <h2 class="visually-hidden">Тарифные планы</h2>
-        <table class="tables-price">
-          <tr class="table__item table__item--title">
-            <th class="visually-hidden"></th>
-            <th class="table__name">База<br><span class="table__price">1,99 USD</span></th>
-            <th class="table__name table__name--hit">Стандарт<br>
-              <div class="table__hit">Хит</div>
-              <span class="table__price">3,99 USD</span></th>
-            <th class="table__name ">Анлим<br><span class="table__price">9,99 USD</span></th>
-          </tr>
-          <tr class="table__item">
-            <td class="table__feature table__feature--title"><span class="table__option">Розовый фильтр</span></td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--on"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--on"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--on"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-          </tr>
-          <tr class="table__item">
-            <td class="table__feature table__feature--title"><span class="table__option">Смайлики</span></td>
-            <td class="table__feature table__feature--unchecked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Недоступно</span>
-            </td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-          </tr>
-          <tr class="table_item">
-            <td class="table__feature table__feature--title"><span class="table__option">Комментарии</span>
-            </td>
-            <td class="table__feature table__feature--unchecked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Недоступно</span>
-            </td>
-            <td class="table__feature table__feature--unchecked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Недоступно</span>
-            </td>
-            <td class="table__feature table__feature--checked">
-              <p class="table__feature-name table__feature-name--off"></p>
-              <span class="visually-hidden">Доступно</span>
-            </td>
-          </tr>
-        </table>
-        <div class="table__pagination  pagination">
-          <button class="table__pagination--item" type="button">1</button>
-          <button class="table__pagination--item  pagination__item‐‐active" type="button">2</button>
-          <button class="table__pagination--item" type="button">3</button>
-        </div>
-      </section>
-    </div>
-     Контакты -->
+      </div>
       <section class="contacts">
         <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь c нами!</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
             <b class="contacts__ring">Звоните:</b>
-            <p class="contacts__text">+7(812)555-66-66</p>
+            <p class="contacts__text">+7 (812) 555-66-66</p>
           </li>
           <li class="contacts__item">
             <b class="contacts__ring">Пишите:</b>
             <p class="contacts__text">mail@htmlacademy.ru</p>
           </li>
-          <li class="contacts__item ttt">
+          <li class="contacts__item">
             <b class="contacts__ring">Приезжайте в гости:</b>
-            <p class="contacts__text">ул.Большая Конюшенная,19/8</p>
+            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
       </section>
-    <!-- Карта -->
       <div class="map main-container">
         <div class="map-container">
           <picture>
@@ -378,8 +306,7 @@
         </div>
       </div>
     </main>
-    <!-- Футер, один скрытый класс для мобильной версии index -->
-    <footer class="main-footer main-footer--hidden">
+    <footer class="main-footer main-footer--hidden main-footer__index">
       <div class="main-container main-footer__container">
         <a class="main-footer__logo">
           <svg width="147" height="40" title="PINK"><use xlink:href="#logo-pink-footer"></use>

@@ -2,15 +2,33 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+/*
+.main-footer__mobile {
+  //min-height: 285px;
+  width: 320px;
+  margin: $center;
+}
+*/
 .main-footer__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.main-footer-form {
+  margin-top: -30px;
+
+  @include respond-to(tablet) {
+    margin-top: 37px;
+  }
+}
+
 .main-footer--hidden {
   display: none;
+}
+
+.main-footer__logo {
+  padding-top: 17px;
 }
 
 .main-footer__logo svg {
@@ -37,6 +55,30 @@
   fill: $red;
 }
 
+.copyright {
+  margin-top: 34px;
+}
+
+.main-footer__copyright {
+  @include font-style(14px, 14px, normal);
+
+  display: flex;
+  padding-top: 30px;
+  width: 160px;
+}
+
+.copyright__text {
+  margin-left: 14px;
+  margin-top: 18px;
+}
+
+.copyright__link svg {
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 34px;
+  height: 34px;
+}
+
 @include respond-to(tablet) {
   .main-footer--hidden {
     display: block;
@@ -46,11 +88,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 20px;
+    min-height: 75px;
   }
 
   .main-footer__logo {
     width: 150px;
     text-align: left;
+    padding: 0;
   }
 
   .main-footer__social {
@@ -61,25 +106,56 @@
     display: flex;
     width: 130px;
     text-align: right;
-    align-items: center;
-    //@include font-style(14px, 14px, normal);
+    padding-top: 5px;
+    margin-right: 10px;
+    align-self: center;
   }
 }
 
 @include respond-to(desktop) {
   .main-footer {
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 70px;
+    width: 960px;
+    margin: $center;
+  }
+
+  .main-footer__index {
+    margin-top: -10px;
+  }
+
+  .main-footer-form {
+    margin-top: -23px;
   }
 
   .main-footer__container {
     padding-left: 10px;
     padding-right: 10px;
+    //padding-top: -5px;
     box-sizing: border-box;
+    //margin-top: 0px;
+  }
+
+  .main-footer__logo {
+    width: 150px;
+    //text-align: left;
+    //padding: 0;
+    //margin-top: -10px;
+    margin-left: -3px;
   }
 
   .main-footer__social {
-    margin-left: 130px;
+    //margin-left: 2px;
+  }
+
+  .main-footer__copyright {
+
+    @include font-style(18px, 14px, normal);
+
+    padding-top: 5px;
+    width: 160px;
+    margin-left: -40px;
+    padding-left: -20px;
   }
 
   .main-footer__logo-glass-xl {

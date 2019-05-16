@@ -8,6 +8,7 @@
 
     @include respond-to(desktop) {
       margin-bottom: 50px;
+      //margin-top: -5px;
     }
   }
 
@@ -63,6 +64,7 @@
   position: relative;
   margin: $center;
   overflow: hidden;
+  z-index: 3;
 }
 
 .post__panorama img {
@@ -72,13 +74,17 @@
   left: 50%;
   transform: translateX(-50%);
   position: relative;
+  padding-bottom: 0;
 
   @include respond-to(tablet) {
     width: 660px;
+    margin-top: 7px;
+    min-height: 510px;
   }
 
   @include respond-to(desktop) {
     width: 960px;
+    margin-top: -1px;
   }
 }
 
@@ -98,7 +104,7 @@
 
   @include respond-to(tablet) {
     transform: translateX(170px);
-    top: 57px;
+    top: 63px;
   }
 
   @include respond-to(desktop) {
@@ -109,6 +115,7 @@
 
 .post__image {
   display: block;
+  //margin-top: 20px;
 
   @include respond-to(tablet) {
     overflow: hidden;
@@ -138,12 +145,28 @@
   flex-grow: 1;
   padding: 18px 18px 20px;
   background-color: $grey-light;
+  margin-left: 1px;
 
   @include respond-to(tablet) {
-    padding-top: 24px;
+    padding-top: 23px;
     padding-right: 32px;
     padding-bottom: 22px;
     padding-left: 28px;
+    min-height: 100px;
+    margin-top: -1px;
+    position: relative;
+  }
+
+  @include respond-to(desktop) {
+    //padding-top: 23px;
+    //padding-right: 32px;
+    //padding-bottom: 22px;
+    //padding-left: 28px;
+    //min-height: 100px;
+    margin-top: 0px;
+    position: relative;
+    //border: 1px solid black;
+    z-index: 1;
   }
 
   &--panorama {
@@ -160,6 +183,37 @@
   }
 }
 
+.post__body-container {
+  margin-top: -5px;
+  padding-top: 1px;
+  min-height: 192px;
+
+  @include respond-to(tablet) {
+    min-height: 122px;
+  }
+
+  @include respond-to(desktop) {
+    min-height: 122px;
+    margin-top: -5px;
+    height: 20px;
+
+    .post__body {
+      margin-top: -11px;
+      margin-left: -2px;
+      z-index: 1;
+    }
+
+    .post__header {
+      margin-top: 7px;
+    }
+
+    .post__action-panorama {
+      margin-top: 20px;
+      margin-left: -4px;
+    }
+  }
+}
+
 .post__header {
   &--panorama {
     @include respond-to(tablet) {
@@ -171,7 +225,38 @@
 }
 
 .post__author {
-  font-weight: 700;
+  @include font-style(14px, 24px, bold);
+}
+
+.post__text {
+  @include font-style(14px, 24px, regular);
+
+  flex-grow: 1;
+  text-align: left;
+  width: 244px;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(tablet) {
+    width: 235px;
+  }
+}
+
+.post__text--panorama {
+  @include respond-to(tablet) {
+    width: 530px;
+  }
+
+  @include respond-to(desktop) {
+    width: 879px;
+    margin-top: 5px;
+  }
 }
 
 .post__time {
@@ -185,11 +270,15 @@
 .post__action {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  height: 35px;
 
   @include respond-to(tablet) {
-    margin-top: 12px;
+    margin-top: 98px;
     padding-left: 0;
+    width: 100px;
+    position: absolute;
+    right: 171px;
+    top: 1px;
   }
 
   &--panorama {
@@ -201,22 +290,24 @@
 }
 
 .post__stats {
-  margin-left: 19px;
-  font-size: 12px;
-  line-height: 24px;
+  @include font-style(12px, 24px, regular);
+  margin-left: 32px;
+  padding-top: 10px;
   text-transform: uppercase;
   color: $pink;
   text-decoration: none;
+  position: relative;
 
   @include respond-to(tablet) {
     margin-left: 0;
     order: -1;
-    margin-right: auto;
+    //margin-right: 120px;
+    //width: 300px;
   }
 
   &--panorama {
     @include respond-to(tablet) {
-      margin-right: 17px;
+      margin-right: 117px;
     }
   }
 
@@ -231,7 +322,13 @@
   position: absolute;
   height: 20px;
   width: 15px;
-  left: 10px;
+  left: -33px;
+  top: 12px;
+
+  @include respond-to(tablet) {
+    margin-left: 246px;
+    margin-top: -1px;
+  }
 }
 
 .like__image svg {
@@ -240,7 +337,18 @@
 
 @include respond-to(tablet) {
   .like__image {
-    right: 0;
-    left: auto;
+    left: -20px;
+  }
+}
+
+.post__action-panorama {
+  @include respond-to(tablet) {
+    position: absolute;
+    margin-right: -123px;
+    margin-top: 12px;
+
+    .like__image {
+      margin-left: 124px;
+    }
   }
 }

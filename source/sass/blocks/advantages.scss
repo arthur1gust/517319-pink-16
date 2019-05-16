@@ -1,11 +1,15 @@
 .advantages {
-  padding-top: 40px;
-  width: auto;
+  //padding-top: 40px;
+  width: 320px;
+  margin: $center;
+  margin-top: 40px;
 }
 
-// Непонятно как сделать фон
-.advantages-container {
+.advantages__container {
+  width: 320px;
+  margin: $center;
   background-color: $gray;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='1200px' height='94.074px' viewBox='0 0 1200 94.074'%3E%3Cpolygon fill='%23ffffff' points='1200,0 0,0 0,94.074 '/%3E%3C/svg%3E");
   background-size: 100%;
   background-position: left top;
   background-repeat: no-repeat;
@@ -36,7 +40,7 @@
   &::after {
     @include location;
 
-    bottom: -10%;
+    bottom: -43px;
     left: 50%;
     width: 157px;
     height: 320px;
@@ -44,6 +48,10 @@
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-size: 100%;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
   }
 }
 
@@ -58,6 +66,9 @@
 .advantages__text {
   @include reset;
   @include font-style(14px, 24px, normal);
+
+  width: 262px;
+  margin-left: 16px;
 }
 
 .advantages__subtitle {
@@ -75,28 +86,43 @@
 
 @include respond-to(tablet) {
   .advantages {
-    padding-top: 48px;
+    padding-top: 7px;
+    width: 660px;
+  }
+
+  .advantages__container {
+    width: 660px;
+    margin: $center;
+    //padding-left: 20px;
+    //padding-right: 20px;
+    //height: 435px;
   }
 
   .advantages__inner {
-    padding-left: 45%;
-    padding-top: 70px;
+    padding-left: 315px;
+    padding-top: 54px;
     padding-bottom: 15px;
 
     &::after {
-      left: 0;
+      left: 20px;
       width: 268px;
-      height: 547px;
-      bottom: -15%;
+      height: 482px;
+      bottom: 2px;
       transform: translateX(0);
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-size: 100%;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
   }
 
   .advantages__offer {
     @include font-style(40px, 48px, lighter);
+
     margin-bottom: 47px;
+    //margin-top: -20px;
   }
 
   .advantages__title {
@@ -112,14 +138,23 @@
     text-align: left;
   }
 
+  .advantages__item {
+    margin-bottom: 31px;
+    padding-left: 15px;
+    width: 324px;
+  }
+
   .advantages__text {
     text-align: left;
+    width: 311px;
+    margin-left: 1px;
   }
 }
 
 @include respond-to(desktop) {
   .advantages {
     padding-top: 64px;
+    width: 960px;
   }
 
   .advantages__inner {
@@ -137,10 +172,16 @@
     @include font-style(50px, 60px, lighter);
 
     margin-bottom: 75px;
+    margin-top: -37px;
   }
 
   .advantages__title {
     @include font-style(50px, 60px, lighter);
+  }
+
+  .advantages__container {
+    width: 960px;
+    margin: $center;
   }
 
   .advantages__item {
@@ -153,14 +194,29 @@
 
     &:nth-child(1) {
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+        background-size: 91%;
+      }
     }
 
     &:nth-child(2) {
       background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+        background-size: 91%;
+      }
     }
 
     &:nth-child(3) {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+        background-size: 91%;
+      }
     }
   }
 
@@ -173,5 +229,9 @@
 
   .advantages__text {
     @include font-style(18px, 30px, normal);
+
+    width: 242px;
+    margin-top: -3px;
+    margin-left: -2px;
   }
 }

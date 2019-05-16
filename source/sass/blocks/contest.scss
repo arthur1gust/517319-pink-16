@@ -30,6 +30,9 @@
     padding-left: 70px;
     padding-right: 70px;
     margin-bottom: 67px;
+    width: 640px;
+    margin-left: -10px;
+    margin-top: -2px;
 
     &--hidden {
       display: block;
@@ -38,7 +41,17 @@
 }
 
 @include respond-to(desktop) {
+  .contest {
+    width: 960px;
+    margin: $center;
+    margin-left: -10px;
+  }
+
   .contest__title {
+    width: 900px;
+    margin: $center;
+    margin-top: -5px;
+
     &--hidden {
       display: inline-block;
     }
