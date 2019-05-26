@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <svg style="display:none">
@@ -112,7 +112,7 @@
       <div class="page-header__container">
         <div class="page-header__container-logo">
           <a class="page-header__logo" href="index.html">
-            <svg  x="0px" y="0px" width="146px" height="40px">
+            <svg x="0px" y="0px" width="146px" height="40px">
               <use xlink:href="#logo-pink-header"></use>
             </svg>
           </a>
@@ -120,10 +120,10 @@
         <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__trigger" aria-label="Открыть меню" type="button"><span></span></button>
           <ul class="main-nav__items">
-            <li class="main-nav__item"><a class= "main-nav__link main-nav__link--current" href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link">Конкурс</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link" href="http://www.htmlacademy.ru">HTML Academy</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="http://www.htmlacademy.ru">HTML Academy</a></li>
           </ul>
         </nav>
       </div>
@@ -141,11 +141,11 @@
               <legend class="visually-hidden">ФИО пользователя</legend>
               <p class="form-participant__item">
                 <label class="form-participant__label" for="surname">Фамилия:</label>
-                <input class="form-participant__input" type="text" name="surname" id="surname" value="" placeholder="Укажите фамилию *" required autofocus>
+                <input class="form-participant__input" type="text" name="surname" id="surname" value="" placeholder="Укажите фамилию *" required="" autofocus="">
               </p>
               <p class="form-participant__item">
                 <label class="form-participant__label" for="name">Имя:</label>
-                <input class="form-participant__input form-participant__input-name" type="text" name="name" id="name" value="" placeholder="Введите ваше имя *" required>
+                <input class="form-participant__input form-participant__input-name" type="text" name="name" id="name" value="" placeholder="Введите ваше имя *" required="">
               </p>
               <p class="form-participant__item">
                 <label class="form-participant__label" for="patronymic">Отчество:</label>
@@ -157,11 +157,11 @@
                 <legend class="form-option__title form-option__title-progress">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-option__list form-option__list--col">
                   <li class="form-option__item">
-                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="selfy" id="selfy" checked>
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="selfy" id="selfy" checked="">
                     <label for="selfy">Сделал селфи с акулой</label>
                   </li>
                   <li class="form-option__item">
-                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="beach" id="beach" checked>
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="beach" id="beach" checked="">
                     <label for="beach">Обгорел на пляже</label>
                   </li>
                   <li class="form-option__item">
@@ -169,15 +169,15 @@
                     <label for="chuck-noris">Видел Чака Норриса</label>
                   </li>
                   <li class="form-option__item">
-                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="souvenir" id="souvenir" >
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="souvenir" id="souvenir">
                     <label for="souvenir">Накупил сувениров</label>
                   </li>
                   <li class="form-option__item">
-                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="tower" id="tower" checked>
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="tower" id="tower" checked="">
                     <label for="tower">Удержал башню</label>
                   </li>
                   <li class="form-option__item">
-                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="crush" id="crush" >
+                    <input class="visually-hidden form-option__checkbox" type="checkbox" name="crush" id="crush">
                     <label for="crush">Разгромил отель</label>
                   </li>
                 </ul>
@@ -195,7 +195,7 @@
                 </p>
                 <p class="form-participant__item form-participant__item--col">
                   <label class="form-participant__label" for="mail">Адрес почты</label>
-                  <input class="form-participant__input form-participant__input--mail" type="email" name="mail" id="mail" value="" placeholder="Введите почту *" required>
+                  <input class="form-participant__input form-participant__input--mail" type="email" name="mail" id="mail" value="" placeholder="Введите почту *" required="">
                   <span class="form-participant__image">
                     <svg width="20" height="15" title="Почта"><use xlink:href="#icon-mail"></use></svg>
                   </span>
@@ -207,7 +207,7 @@
               <legend class="form-option__title form-option__title-os">С каким приложением путешествовали?</legend>
               <ul class="form-option__list form-option__list-os">
                 <li class="form-option__item">
-                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="ios" id="ios" checked>
+                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="ios" id="ios" checked="">
                   <label for="ios">Pink для iOS</label>
                 </li>
                 <li class="form-option__item">
